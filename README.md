@@ -19,7 +19,19 @@ My dataset has **1534** entries, and the following **10** features will be relev
 
 # Data Cleaning and Exploratory Data Analysis
 ## Data Cleaning
-Describe, in detail, the data cleaning steps you took and how they affected your analyses. The steps should be explained in reference to the data generating process. Show the head of your cleaned DataFrame (see Part 2: Report for instructions).
+To clean the data, I began by converting missing values from `'NA'` to `'nan'` representation for consistency across missing values. Then, I worked on conbining date & time columns into single Datetime columns. So, `OUTAGE.START.DATE` and `OUTAGE.START.TIME` are combined into `OUTAGE.START`, and `OUTAGE.RESTORATION.DATE` and `OUTAGE.RESTORATION.TIME` combine into `OUTAGE.RESTORATION`. I then chose to drop the original 4 columns from the dataset.
+
+Then, I one hot encoded cause categories. We have seven possible cause categories, so an additional seven features were created (example column name: `cause==severe weather`). I kept the original column so we can one hot encode it again within our pipeline, but it's valuable for EDA and will help us impute values.
+
+Next, I looked at the feature `NERC.REGION`. After some initial research, I learned there are six main NERC regions across the United States. However, collecting value counts from this feature showed that my dataset had 14 possible values. So, I investigated the region names I did not recognize, and learned that most subregions that belong to one of the six main regions. I strategically mapped these subregions to the main regions; this way, I'll be able to consider regional trends' impact on the cause of an outage.
+
+Lastly, I had to handle missing values in the dataset. I began by dropping entries where both `OUTAGE.START` and `OUTAGE.RESTORATION` were missing, this only accounted for 9 entries (0.587% of the original data) so dropping these entries poses no concern for data generalization. After this, there were 49 remaining entries with missing values in `OUTAGE.DURATION` and `OUTAGE.RESTORATION`. I imputed these values with the following methods:
+1. Compute mean duration for each cause category.
+2. Iterate over the entire dataset, and fill missing duration values with the entry's cause category mean value.
+3. Compute restoration time using `OUTAGE.START` and `OUTAGE.DURATION`.
+See *imputation* for a visualization describing how these imputed values modify our dataset's statistics.
+
+These data cleaning steps leave us with a dataset like this: **TODO**
 
 ## Univariate Analysis
 Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)

@@ -70,6 +70,7 @@ frameborder='0'
 ></iframe>
 Here, we see that the cause category 'Sever Weather' is the most common category for each month, excluding March. This category dominates the visual, but I also notice other trends: the category 'Public Appeal' is most likely to occur in the summer months, and outages caused by Intentional Attacks are more common in the first half of the year.
 
+## Interesting Aggregates
 <iframe
 src='assets/outages_region_cause.html'
 width='800'
@@ -78,11 +79,19 @@ frameborder='0'
 ></iframe>
 Here, we gain a few more valuable insights. The region WECC is most likely to face outages due to Intentional Attacks, while region RFC is dominated by Severe Weather outages.
 
-## Interesting Aggregates
-Embed at least one grouped table or pivot table in your website and explain its significance.
-
 ## Imputation
-If you imputed any missing values, visualize the distributions of the imputed columns before and after imputation. Describe which imputation technique you chose to use and why. If you didn’t fill in any missing values, discuss why not.
+As mentioned in the data cleaning section, I chose to impute missing values for `OUTAGE.DURATION` using the mean duration values from outages with the same cause category. This table describes summary statistics for `OUTAGE.DURATION` before and after mean imputation.
+```
+statistic   Before Imputation  After Imputation  Change
+count            1476.00           1525.00   49.00
+mean             2625.40           2693.66   68.26
+std              5942.48           5931.29  -11.20
+min                 0.00              0.00    0.00
+25%               102.25            108.00    5.75
+50%               701.00            728.87   27.87
+75%              2880.00           3000.00  120.00
+max            108653.00         108653.00    0.00
+```
 
 # Framing a Prediction Problem
 Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).

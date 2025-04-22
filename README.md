@@ -95,8 +95,9 @@ max            108653.00          108653.00             0.00
 These results are expected: an increased sample size since we filled missing values, a slightly increased mean indicating that the imputed values are a bit larger than the original values, and a decrease in standard deviation tells us that our data is slightly less variable now.
 
 # Framing a Prediction Problem
-Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).
-Note: Make sure to justify what information you would know at the “time of prediction” and to only train your model using those features. For instance, if we wanted to predict your Final Exam grade, we couldn’t use your Final Project grade, because we (probably) won’t have the Final Project graded before the Final Exam! Feel free to ask questions if you’re not sure.
+My prediction problem is as follows:
+> **Predict the Cause Category of A Major Power Outage**
+This is a multiclass classification, with the response variable `CAUSE.CATEGORY`. When conducting EDA in steps 1-2, I was intrigued by some values I saw in our cause category feature. I plan to use outage `OUTAGE.DURATION`, `OUTAGE.MONTH`, and `NERC.REGION` to predict it's corresponding cause category. To measure performance, I will be using the F1-score metric. My dataset has class imbalance, and this metric will treat all classes equally.
 
 # Baseline Model
 Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.

@@ -112,10 +112,6 @@ The baseline model's pipeline consists of:
 This model achieved an f1-macro score of 0.297, which is our baseline performance. The model scores low, which is expected given limited features and the difficulty of multiclass classifications. The model clearly needs improvement, so we'll use feature engineering and model tuning to create our final model.
 
 # Final Model
-State the features you added and why they are good for the data and prediction task. Note that you can’t simply state “these features improved my accuracy”, since you’d need to choose these features and fit a model before noticing that – instead, talk about why you believe these features improved your model’s performance from the perspective of the data generating process.
-Describe the modeling algorithm you chose, the hyperparameters that ended up performing the best, and the method you used to select hyperparameters and your overall model. Describe how your Final Model’s performance is an improvement over your Baseline Model’s performance.
-Optional: Include a visualization that describes your model’s performance, e.g. a confusion matrix, if applicable.
-
 In order to improve our score from the baseline model, I made a few enhancements:
 
 ### Feature Engineering

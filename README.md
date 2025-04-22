@@ -131,4 +131,4 @@ In order to improve our score from the baseline model, I made a few enhancements
    - `class_weight=balanced` to help with class imbalance
 
 ### Updated Performance
-My final model achieved an f1-macro score of 0.389, which representts a 31% improvement from our baseline! This model stronly captures seasonal patterns and offers better generalization with hyperparameter tuning.
+My final model achieved an f1-macro score of 0.389, which representts a **31% improvement** from our baseline! This model stronly captures seasonal patterns and offers better generalization with hyperparameter tuning.

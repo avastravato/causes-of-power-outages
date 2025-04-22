@@ -33,7 +33,7 @@ See *imputation* for a visualization describing how these imputed values modify 
 
 These data cleaning steps leave us with a dataset like this:
 ```
-YEAR  MONTH U.S._STATE      CAUSE.CATEGORY  OUTAGE.DURATION        OUTAGE.START  OUTAGE.RESTORATION  cause==severe weather  cause==intentional attack  cause==system operability disruption  cause==equipment failure  cause==public appeal  cause==fuel supply emergency  cause==islanding NERC.REGION
+   YEAR  MONTH U.S._STATE      CAUSE.CATEGORY  OUTAGE.DURATION        OUTAGE.START  OUTAGE.RESTORATION  cause==severe weather  cause==intentional attack  cause==system operability disruption  cause==equipment failure  cause==public appeal  cause==fuel supply emergency  cause==islanding NERC.REGION
 0  2011    7.0  Minnesota      severe weather           3060.0 2011-07-01 17:00:00 2011-07-03 20:00:00                      1                          0                                     0                         0                     0                             0                 0         MRO
 1  2014    5.0  Minnesota  intentional attack              1.0 2014-05-11 18:38:00 2014-05-11 18:39:00                      0                          1                                     0                         0                     0                             0                 0         MRO
 2  2010   10.0  Minnesota      severe weather           3000.0 2010-10-26 20:00:00 2010-10-28 22:00:00                      1                          0                                     0                         0                     0                             0                 0         MRO

@@ -31,7 +31,15 @@ Lastly, I had to handle missing values in the dataset. I began by dropping entri
 3. Compute restoration time using `OUTAGE.START` and `OUTAGE.DURATION`.
 See *imputation* for a visualization describing how these imputed values modify our dataset's statistics.
 
-These data cleaning steps leave us with a dataset like this: **TODO**
+These data cleaning steps leave us with a dataset like this:
+<pre>```
+YEAR  MONTH U.S._STATE      CAUSE.CATEGORY  OUTAGE.DURATION        OUTAGE.START  OUTAGE.RESTORATION  cause==severe weather  cause==intentional attack  cause==system operability disruption  cause==equipment failure  cause==public appeal  cause==fuel supply emergency  cause==islanding NERC.REGION
+0  2011    7.0  Minnesota      severe weather           3060.0 2011-07-01 17:00:00 2011-07-03 20:00:00                      1                          0                                     0                         0                     0                             0                 0         MRO
+1  2014    5.0  Minnesota  intentional attack              1.0 2014-05-11 18:38:00 2014-05-11 18:39:00                      0                          1                                     0                         0                     0                             0                 0         MRO
+2  2010   10.0  Minnesota      severe weather           3000.0 2010-10-26 20:00:00 2010-10-28 22:00:00                      1                          0                                     0                         0                     0                             0                 0         MRO
+3  2012    6.0  Minnesota      severe weather           2550.0 2012-06-19 04:30:00 2012-06-20 23:00:00                      1                          0                                     0                         0                     0                             0                 0         MRO
+4  2015    7.0  Minnesota      severe weather           1740.0 2015-07-18 02:00:00 2015-07-19 07:00:00                      1                          0                                     0                         0                     0                             0                 0         MRO
+```</pre>
 
 ## Univariate Analysis
 Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)

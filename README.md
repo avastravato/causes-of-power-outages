@@ -92,6 +92,7 @@ min                 0.00               0.00             0.00
 75%              2880.00            3000.00             120.00
 max            108653.00          108653.00             0.00
 ```
+These results are expected: an increased sample size since we filled missing values, a slightly increased mean indicating that the imputed values are a bit larger than the original values, and a decrease in standard deviation tells us that our data is slightly less variable now.
 
 # Framing a Prediction Problem
 Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score).

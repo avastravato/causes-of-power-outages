@@ -2,20 +2,20 @@
 
 From 2000-2016, Purdue compiled a dataset documenting major power outages across the United States. Each row corresponds to an outage instance, including details like location, duration, cause category, and the affected NERC (North American Electric Reliability Corporation) region. Using these features, I will be investigating the following:
 
-> What characteristics are most strongly associated with various causes of major power outages?
+> ### What characteristics are most strongly associated with various causes of major power outages?
 
-My dataset has 1534 entries, and the following 10 features will be relevant to my analysis:
+My dataset has **1534** entries, and the following **10** features will be relevant to my analysis:
 
-- `YEAR`: indicates the year when the outage event occurred [2000,2016].
-- `MONTH`: indicates the month when the outage event occurred [1,12].
-- `U.S._STATE`: indicates the U.S. state where the outage event occurred.
-- `NERC.REGION`: the NERC region involved in the outage event.
-- `OUTAGE.START.DATE`: indicates the day of the year when the outage event started.
-- `OUTAGE.START.TIME`: indicates the time of the day when the outage event started.
-- `OUTAGE.RESTORATION.DATE`: indicates the day of the year when power was restored to all customers.
-- `OUTAGE.RESTORATION.TIME`: indicates the time of the day when power was restored to all customers.
-- `CAUSE.CATEGORY`: categories of all the events causing the major power outages.
-- `OUTAGE.DURATION`: duration of an outage event (in minutes).
+- **`YEAR`**: indicates the year when the outage event occurred [2000,2016].
+- **`MONTH`**: indicates the month when the outage event occurred [1,12].
+- **`U.S._STATE`**: indicates the U.S. state where the outage event occurred.
+- **`NERC.REGION`**: the NERC region involved in the outage event.
+- **`OUTAGE.START.DATE`**: indicates the day of the year when the outage event started.
+- **`OUTAGE.START.TIME`**: indicates the time of the day when the outage event started.
+- **`OUTAGE.RESTORATION.DATE`**: indicates the day of the year when power was restored to all customers.
+- **`OUTAGE.RESTORATION.TIME`**: indicates the time of the day when power was restored to all customers.
+- **`CAUSE.CATEGORY`**: categories of all the events causing the major power outages.
+- **`OUTAGE.DURATION`**: duration of an outage event (in minutes).
 
 # Data Cleaning and Exploratory Data Analysis
 ## Data Cleaning

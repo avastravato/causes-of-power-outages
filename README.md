@@ -1,5 +1,3 @@
-# causes-of-power-outages
-
 ## Introduction
 
 ## Data Cleaning and Exploratory Data Analysis

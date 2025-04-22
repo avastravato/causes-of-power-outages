@@ -82,7 +82,7 @@ Here, we gain a few more valuable insights. The region WECC is most likely to fa
 ## Imputation
 As mentioned in the data cleaning section, I chose to impute missing values for `OUTAGE.DURATION` using the mean duration values from outages with the same cause category. This table describes summary statistics for `OUTAGE.DURATION` before and after mean imputation.
 ```
-statistic   Before Imputation  After Imputation  Change
+Before Imputation  After Imputation  Change
 count            1476.00           1525.00   49.00
 mean             2625.40           2693.66   68.26
 std              5942.48           5931.29  -11.20

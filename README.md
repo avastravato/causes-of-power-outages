@@ -1,9 +1,9 @@
-## Introduction
+# Introduction
 
-## Data Cleaning and Exploratory Data Analysis
+# Data Cleaning and Exploratory Data Analysis
 
-## Framing a Prediction Problem
+# Framing a Prediction Problem
 
-## Baseline Model
+# Baseline Model
 
-## Final Model
+# Final Model

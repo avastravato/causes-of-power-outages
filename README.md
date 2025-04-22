@@ -68,7 +68,7 @@ width='800'
 height='600'
 frameborder='0'
 ></iframe>
-Here,
+Here, we see that the cause category 'Sever Weather' is the most common category for each month, excluding March. This category dominates the visual, but I also notice other trends: the category 'Public Appeal' is most likely to occur in the summer months, and outages caused by Intentional Attacks are more common in the first half of the year.
 
 <iframe
 src='assets/outages_region_cause.html'
@@ -76,7 +76,7 @@ width='800'
 height='600'
 frameborder='0'
 ></iframe>
-Here,
+Here, we gain a few more valuable insights. The region WECC is most likely to face outages due to Intentional Attacks, while region RFC is dominated by Severe Weather outages.
 
 ## Interesting Aggregates
 Embed at least one grouped table or pivot table in your website and explain its significance.

@@ -42,7 +42,6 @@ YEAR  MONTH U.S._STATE      CAUSE.CATEGORY  OUTAGE.DURATION        OUTAGE.START 
 ```
 
 ## Univariate Analysis
-Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
 
 <iframe
 src='assets/outages_region.html'
@@ -50,7 +49,7 @@ width='800'
 height='600'
 frameborder='0'
 ></iframe>
-We see here ...
+We see here that NERC regions WECC and RFC contribute almost 2/3 of the reported outages. We should investigate regional trends further, and determine if certain causes correspond to some region.
 
 <iframe
 src='assets/outages_month.html'
@@ -58,10 +57,26 @@ width='800'
 height='600'
 frameborder='0'
 ></iframe>
-Here, we investigate seasonal trends. Observe that the most outages occur in the summer months, while ... have the fewest number of reported outages. We will definitely want to create features to clearly show this relationship.
+Here, we investigate seasonal trends. Observe that the most outages occur in the summer months (Jun-Aug), with additional peaks in the winter months (Dec-Feb). This tells us that there is a definite relationship between the month of the outage and the cause of the outage, and we should create features to clearly show this relationship.
 
 ## Bivariate Analysis
 Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one bivariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
+
+<iframe
+src='assets/outages_month_cause.html'
+width='800'
+height='600'
+frameborder='0'
+></iframe>
+Here,
+
+<iframe
+src='assets/outages_region_cause.html'
+width='800'
+height='600'
+frameborder='0'
+></iframe>
+Here,
 
 ## Interesting Aggregates
 Embed at least one grouped table or pivot table in your website and explain its significance.

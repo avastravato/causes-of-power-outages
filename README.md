@@ -1,6 +1,23 @@
 # Introduction
 Provide an introduction to your dataset, and clearly state the one question your project is centered around. Why should readers of your website care about the dataset and your question specifically? Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
 
+From 2000-2016, Purdue compiled a dataset documenting major power outages across the United States. Each row corresponds to an outage instance, including details like location, duration, cause category, and the affected NERC (North American Electric Reliability Corporation) region. Using these features, I will be investigating the following:
+
+> What characteristics are most strongly associated with various causes of major power outages?
+
+My dataset has 1534 entries, and the following 10 features will be relevant to my analysis:
+
+- `YEAR`: indicates the year when the outage event occurred [2000,2016].
+- `MONTH`: indicates the month when the outage event occurred [1,12].
+- `U.S._STATE`: indicates the U.S. state where the outage event occurred.
+- `NERC.REGION`: the NERC region involved in the outage event.
+- `OUTAGE.START.DATE`: indicates the day of the year when the outage event started.
+- `OUTAGE.START.TIME`: indicates the time of the day when the outage event started.
+- `OUTAGE.RESTORATION.DATE`: indicates the day of the year when power was restored to all customers.
+- `OUTAGE.RESTORATION.TIME`: indicates the time of the day when power was restored to all customers.
+- `CAUSE.CATEGORY`: categories of all the events causing the major power outages.
+- `OUTAGE.DURATION`: duration of an outage event (in minutes).
+
 # Data Cleaning and Exploratory Data Analysis
 ## Data Cleaning
 Describe, in detail, the data cleaning steps you took and how they affected your analyses. The steps should be explained in reference to the data generating process. Show the head of your cleaned DataFrame (see Part 2: Report for instructions).

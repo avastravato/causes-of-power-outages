@@ -96,7 +96,8 @@ These results are expected: an increased sample size since we filled missing val
 
 # Framing a Prediction Problem
 My prediction problem is as follows:
-> **Predict the Cause Category of A Major Power Outage**
+> ### Predict the Cause Category of A Major Power Outage
+
 This is a multiclass classification, with the response variable `CAUSE.CATEGORY`. When conducting EDA in steps 1-2, I was intrigued by some values I saw in our cause category feature. I plan to use outage `OUTAGE.DURATION`, `OUTAGE.MONTH`, and `NERC.REGION` to predict it's corresponding cause category. To measure performance, I will be using the F1-score metric. My dataset has class imbalance, and this metric will treat all classes equally.
 
 # Baseline Model

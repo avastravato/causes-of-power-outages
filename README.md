@@ -117,15 +117,18 @@ Describe the modeling algorithm you chose, the hyperparameters that ended up per
 Optional: Include a visualization that describes your model’s performance, e.g. a confusion matrix, if applicable.
 
 In order to improve our score from the baseline model, I made a few enhancements:
+
 ### Feature Engineering
 1. I used sine and cosine transformations on `MONTH` in hopes of capturing the seasonal trends we discovered during EDA.
 2. I standardized `OUTAGE.DURATION`
 3. Used the same one hot encoding for `NERC.REGION`
+
 ### Model Improvements
 1. I used a `ColumnTransformer` for my preprocessing due to the extra steps
 2. I added parameters to the RandomForestClassifier (I used grid search to find these optimal values):
    - `n_estimators=200` for more stable predictions
    - `max_depth=12` to help with overfitting
    - `class_weight=balanced` to help with class imbalance
+
 ### Updated Performance
 My final model achieved an f1-macro score of 0.389, which representts a 31% improvement from our baseline! This model stronly captures seasonal patterns and offers better generalization with hyperparameter tuning.

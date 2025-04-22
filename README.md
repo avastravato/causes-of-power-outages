@@ -98,11 +98,21 @@ These results are expected: an increased sample size since we filled missing val
 My prediction problem is as follows:
 > ### Predict the Cause Category of A Major Power Outage
 
-This is a multiclass classification, with the response variable `CAUSE.CATEGORY`. When conducting EDA in steps 1-2, I was intrigued by some values I saw in our cause category feature. I plan to use outage `OUTAGE.DURATION`, `OUTAGE.MONTH`, and `NERC.REGION` to predict it's corresponding cause category. To measure performance, I will be using the F1-score metric. My dataset has class imbalance, and this metric will treat all classes equally.
+This is a multiclass classification, with the response variable `CAUSE.CATEGORY`. When conducting EDA in steps 1-2, I was intrigued by some values I saw in our cause category feature. I plan to use outage `OUTAGE.DURATION`, `OUTAGE.MONTH`, and `NERC.REGION` to predict it's corresponding cause category. To measure performance, I will be using the f1-macro score metric. My dataset has class imbalance, and this metric will treat all classes with equal importance.
 
 # Baseline Model
 Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
 Tip: Make sure to hit all of the points above: many Final Projects in the past have lost points for not doing so.
+
+For my baseline model, I chose to predict `CAUSE.CATEGORY` using two features:
+- `OUTAGE.DURATION` (quantitative): the duration of the outage in minutes
+- `NERC.REGION` (nominal): the NERC region where the outage occurred
+
+The baseline model's pipeline consists of:
+1. OneHotEncoder for `NERC.REGION` feature (we drop the first category to avoid multicollinearity)
+2. RandomForestClassifier with default parameters
+
+This model acheived an f1-macro score of 0.297, which is our baseline performance. The model scores low, which is expected given limited features and the difficulty of multiclass classifications. The model clearly needs improvement, so we'll use feature engineering and model tuning to create our final model.
 
 # Final Model
 State the features you added and why they are good for the data and prediction task. Note that you can’t simply state “these features improved my accuracy”, since you’d need to choose these features and fit a model before noticing that – instead, talk about why you believe these features improved your model’s performance from the perspective of the data generating process.

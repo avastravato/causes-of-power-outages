@@ -101,9 +101,6 @@ My prediction problem is as follows:
 This is a multiclass classification, with the response variable `CAUSE.CATEGORY`. When conducting EDA in steps 1-2, I was intrigued by some values I saw in our cause category feature. I plan to use outage `OUTAGE.DURATION`, `OUTAGE.MONTH`, and `NERC.REGION` to predict it's corresponding cause category. To measure performance, I will be using the f1-macro score metric. My dataset has class imbalance, and this metric will treat all classes with equal importance.
 
 # Baseline Model
-Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
-Tip: Make sure to hit all of the points above: many Final Projects in the past have lost points for not doing so.
-
 For my baseline model, I chose to predict `CAUSE.CATEGORY` using two features:
 - `OUTAGE.DURATION` (quantitative): the duration of the outage in minutes
 - `NERC.REGION` (nominal): the NERC region where the outage occurred
